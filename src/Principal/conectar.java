@@ -1,5 +1,5 @@
 
-package Clases;
+package Principal;
 
 import com.mysql.jdbc.Connection;
 import java.sql.DriverManager;

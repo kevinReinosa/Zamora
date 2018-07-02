@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Clases;
+package PrimerTabla;
 
 import javax.swing.JOptionPane;
 
@@ -224,7 +224,7 @@ public class Operaciones {
         return resul;
     }
 
-    public String[] Compensacion(int tamaño, String[] gr, String[] mi, String[] se) {
+    public double[] Compensacion(int tamaño, String[] gr, String[] mi, String[] se) {
         Rtamaño(tamaño);
         Recibir(gr, mi, se);
         Aprox();
@@ -232,12 +232,30 @@ public class Operaciones {
         Calculo1();
         Aproximar();
         Error();
-        String[] resul = new String[vv];
+       
+        /*String[] resul = new String[vv];
         //llenar el vector que regresara 
         for (int i = 0; i < vv; i = i + 4) {
             resul[i] = r4[i] + "°" + r5[i] + "´´" + r6[i] + "´";
         }
+        return resul;  */
+        double[] resul = new double[vv];
+        for (int i = 0; i < vv; i = i + 4) {
+            resul[i] = r4[i];
+            resul[i+1] = r5[i];
+            resul[i+2] = r6[i];
+        }
         return resul;
+    }
+    public double[] Com(){
+    double[] resul = new double[vv];
+        //llenar el vector que regresara 
+        for (int i = 0; i < vv; i = i + 4) {
+            resul[i] = r4[i];
+            resul[i+1] = r5[i];
+            resul[i+2] = r6[i];
+        }
+        return resul;    
     }
 
     int tan;
